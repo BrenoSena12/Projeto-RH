@@ -1,0 +1,25 @@
+@media screen and (max-width: 960px){
+
+    
+
+    article{
+        text-align: center;
+    }
+
+    img{
+        width: 25%;
+    }
+
+    main{
+        margin-top: 10%;
+        flex-direction: column;
+        box-shadow: none;
+        background: none;
+        flex-direction: column-reverse;
+    }
+    
+    form{
+        padding: 30px;
+        width: 80%;
+    }
+}
