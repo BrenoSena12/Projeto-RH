@@ -16,7 +16,7 @@ body{
     max-width: 1200px;
     margin: auto;
     font-family: "Poppins", sans-serif;
-    background-color: var(--color1);
+    background-color: white;
 }
 
 img{
