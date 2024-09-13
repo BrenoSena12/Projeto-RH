@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+:root{
+    --color1: #BABBB1;
+    --color2: #383835;
+    --color3: #383835c2;
+}
+
+.container{
+    margin-top: 20px;
+}
+
+h1{
+    text-align: center;
+    background-color: var(--color1);
+}
+
+h2{
+    padding-top: 20px;
+}
+
+form{
+    margin: auto;
+    width: 60%;
+}
+
+label{
+    margin-top: 10px; 
+}
+
+.btn btn-primary{
+    width: 100px;
+}
+
