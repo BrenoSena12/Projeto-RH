@@ -14,13 +14,15 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    background-color: white;
+
     text-align: center;
 }
 
 nav{
-    background-color: var(--color1);
+    background-color: black;
     height: 170px;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.103) 0px 22px 70px 4px;
 }
 
 h1{
@@ -38,3 +40,20 @@ a{
     margin-right: 40px;
     font-size: 17px;
 }
+
+.carousel-item{
+    height: 780px;
+    width: 900px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+main{
+    margin: auto;
+    width: 100%;
+}
+
