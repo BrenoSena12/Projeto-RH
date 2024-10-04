@@ -18,6 +18,14 @@ body{
 
 .container{
     margin-top: 20px;
+    background-color: var(--color1);
+    border-radius: 15px;
+    height: 870px;
+    box-shadow: 0px 0px 25px #38383574;
+}
+
+.form-group{
+    padding-top: 5px;
 }
 
 .form-group h1{
@@ -36,7 +44,7 @@ form{
     width: 60%;
     box-shadow: 0px 0px 25px #38383574;
     padding: 20px;
-    background-color: var(--color1);
+    background-color: white;
     border-radius: 15px;
 }
 
