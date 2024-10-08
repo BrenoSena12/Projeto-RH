@@ -1,66 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap');
-
-*{
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(109, 109, 109));
 }
 
 :root{
-    --color1: #BABBB1;
-    --color2: #383835;
-    --color3: #383835c2;
+    --color1: rgb(186, 187, 177);
+    --color2: rgb(56, 56, 53);
+    --color3: rgb(109, 109, 109);
 }
 
-body{
-    font-family: "Poppins", sans-serif;
-}
-
-.container{
-    margin-top: 20px;
+.box{
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
     background-color: var(--color1);
+    padding: 15px;
     border-radius: 15px;
-    height: 870px;
-    box-shadow: 0px 0px 25px #38383574;
+    width: 20%;
+    box-shadow: 0px 0px 25px #383835;
 }
-
-.form-group{
-    padding-top: 5px;
+fieldset{
+    border: 3px solid var(--color2);
 }
-
-.form-group h1{
+legend{
+    border: 1px solid var(--color2);
+    padding: 10px;
     text-align: center;
-    text-decoration: underline;
+    background-color: var(--color2);
+    border-radius: 8px;
+}
+.inputBox{
+    position: relative;
+    color: black;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    width: 100%;
+    letter-spacing: 2px;
+}
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput,
+.inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
     color: var(--color2);
 }
-
-h2{
-    padding-top: 20px;
-    font-family: "Poppins", sans-serif;
+#data_nascimento , #data_admissao{
+    border: none;
+    padding: 8px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 15px;
 }
-
-form{
-    margin: auto;
-    width: 60%;
-    box-shadow: 0px 0px 25px #38383574;
-    padding: 20px;
-    background-color: white;
-    border-radius: 15px;
+#submit{
+    background-color: var(--color3);
+    width: 100%;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
 }
-
-label{
-    margin-top: 10px; 
-}
-
-#salario{
-    margin-bottom: 20px;
-}
-
-svg{
-    color: black;
-    margin: 5px 20px;
-}
-
-svg:hover{
-    color: rgb(182, 28, 28);
+#submit:hover{
+    background-color: var(--color2);
 }
