@@ -1,3 +1,25 @@
+<?php 
+
+    if(isset($_POST['submit']))
+    {
+        //print_r($_POST['nome']);
+        //print_r($_POST['senha']);
+
+        include_once('../config.php'); //incluir a conexão
+
+        $nome = $_POST['nome'];
+        $senha = $_POST['senha'];
+
+        //Executa uma consulta SQL que insere um novo registro na tabela
+        $result = mysqli_query($conexao, "INSERT INTO tb_login(nome, senha)
+                                          VALUES('$nome','$senha')");
+
+    }
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,16 +34,16 @@
 
     <main>
 
-        <form action="" method="">
+        <form action="cadastro.php" method="POST">
             <h1>Cadastrar</h1>
             
             <label for="">Nome:</label>
-            <input type="text" name="login" id="login" placeholder="Digite seu nome de cadastro">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome de cadastro">
             
             <label for="">Senha:</label>
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             
-            <input type="submit" name="" id="" value="Entrar">
+            <input type="submit" name="submit" id="submit" value="Entrar">
 
             <a href="/index.html">voltar</a>
         </form>

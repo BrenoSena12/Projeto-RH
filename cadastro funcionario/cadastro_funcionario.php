@@ -1,15 +1,27 @@
 <?php 
-
     if(isset($_POST['submit']))
     {
-        print_r($_POST['data_admissao']);
 
+        include_once('../config.php'); //incluir a conexão
+
+        $cpf             = $_POST['cpf'];
+        $nome            = $_POST['nome'];
+        $telefone        = $_POST['telefone'];
+        $endereco        = $_POST['endereco'];
+        $data_nascimento = $_POST['data_nascimento'];
+        $cargo           = $_POST['cargo'];
+        $data_admissao   = $_POST['data_admissao'];
+        $salario         = $_POST['salario'];
+
+        //Executa uma consulta SQL que insere um novo registro na tabela
+        $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario) 
+                                          VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario' )");
     }
 ?>
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
