@@ -16,20 +16,20 @@
         </article>
 
 
-        <form action="" method="">
+        <form action="configLogin.php" method="POST">
             <h1>Login</h1>
             
             <label for="">Nome:</label>
-            <input type="text" name="login" id="login" placeholder="Digite seu nome de cadastro">
+            <input type="text" name="nome" id="nome" placeholder="Digite seu nome de cadastro">
             
             <label for="">Senha:</label>
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             
-            <input type="submit" name="" id="" value="Entrar">
+            <input type="submit" name="submit" id="submit" value="Entrar">
 
             <div class="cadastrar">
                 Não possui cadastro ainda?
-                <a href="tela de cadastro/cadastro.html">Cadastrar</a>
+                <a href="tela de cadastro/cadastro.php">Cadastrar</a>
             </div>
         
         </form>

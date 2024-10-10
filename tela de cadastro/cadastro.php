@@ -14,6 +14,8 @@
         $result = mysqli_query($conexao, "INSERT INTO tb_login(nome, senha)
                                           VALUES('$nome','$senha')");
 
+        header('Location:../login.php')   ;                               
+
     }
 ?>
 
@@ -43,9 +45,9 @@
             <label for="">Senha:</label>
             <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
             
-            <input type="submit" name="submit" id="submit" value="Entrar">
+            <input type="submit" name="submit" id="submit" value="Cadastrar">
 
-            <a href="/index.html">voltar</a>
+            <a href="../login.php">voltar</a>
         </form>
         
     <article>

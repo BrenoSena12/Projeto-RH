@@ -1,3 +1,19 @@
+<?php 
+
+    session_start();//sempre que trabalhar com sessões tem que começar assim
+    //print_r($_SESSION);
+    if((!isset($_SESSION['nome']) == true) and (!isset($_SESSION['senha']) == true))
+    {
+        unset($_SESSION['nome']);//unset destroi os dados
+        unset($_SESSION['senha']);
+        header('Location:../login.php');
+        exit();
+    }
+    $logado = $_SESSION['nome'];
+    
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -21,7 +37,7 @@
                 <a href="/cadastro funcionario/cadastro_funcionario.html">Cadastrar colaborador</a>
                 <a href="#">Pesquisar colaborador</a>
                 <a href="#">Calculadora</a>
-                <a href="#">Outros</a>
+                <a href="../sair.php">sair</a>
             </div>
         </nav>
             
