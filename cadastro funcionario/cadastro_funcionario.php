@@ -85,6 +85,11 @@
                 <br><br>
 
                 <input type="submit" name="submit" id="submit">
+
+                <div class="link">
+                    <a href="../tela inicial/Tela_inicial.php">Voltar</a>
+                </div>
+                
             </fieldset>
         </form>
     </div>

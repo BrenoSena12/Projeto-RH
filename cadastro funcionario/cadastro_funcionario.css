@@ -1,6 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(109, 109, 109));
+    background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(186, 187, 177));
 }
 
 :root{
@@ -77,4 +77,19 @@ legend{
 }
 #submit:hover{
     background-color: var(--color2);
+}
+
+.link {
+    margin-top: 15px;
+    margin-left: 45%;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: underline;
+    color: var(--color2);
 }

@@ -34,7 +34,7 @@
             <h1>Calculadora e Gestão de RH</h1>
 
             <div class="funcoes">    
-                <a href="/cadastro funcionario/cadastro_funcionario.html">Cadastrar colaborador</a>
+                <a href="../cadastro funcionario/cadastro_funcionario.php">Cadastrar colaborador</a>
                 <a href="#">Pesquisar colaborador</a>
                 <a href="#">Calculadora</a>
                 <a href="../sair.php">sair</a>
