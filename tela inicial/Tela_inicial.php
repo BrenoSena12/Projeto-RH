@@ -35,7 +35,7 @@
 
             <div class="funcoes">    
                 <a href="../cadastro funcionario/cadastro_funcionario.php">Cadastrar colaborador</a>
-                <a href="#">Pesquisar colaborador</a>
+                <a href="../pesquisa/pesquisa.php">Pesquisar colaborador</a>
                 <a href="#">Calculadora</a>
                 <a href="../sair.php">sair</a>
             </div>
