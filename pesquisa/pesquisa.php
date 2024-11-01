@@ -4,12 +4,10 @@ session_start();
 
 include_once('../config.php');
 
-if(!empty($_GET['search']))
-{
+if (!empty($_GET['search'])) {
     $data = $_GET['search'];
     $sql = "SELECT * FROM tb_cadastro_funcionarios WHERE id LIKE '%$data%' or nome LIKE '%$data%' or cpf LIKE '%$data%' ORDER BY     id ASC";
-}
-else{
+} else {
     $sql = "SELECT * FROM tb_cadastro_funcionarios ORDER BY id ASC";
 }
 
@@ -25,16 +23,37 @@ $result = $conexao->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão rh</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="pesquisa.css">
-
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sriracha&display=swap');
+
+        * {
+            border: 0px;
+            padding: 0px;
+            margin: 0;
+            font-family: 'poppins', sans-serif;
+        }
+
         :root {
             --color1: #BABBB1;
             --color2: #383835;
             --color3: #383835c2;
         }
 
-        .box-search{
+        h1 {
+            color: var(--color3);
+            font-size: 0.5in;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 55px;
+        }
+
+        :root {
+            --color1: #BABBB1;
+            --color2: #383835;
+            --color3: #383835c2;
+        }
+
+        .box-search {
             display: flex;
             justify-content: center;
             gap: .1%;
@@ -56,13 +75,21 @@ $result = $conexao->query($sql);
             text-align: center;
             margin-left: 48%;
         }
+
+        .table th {
+            background-color: #898a86;
+            color: white;
+        }
+
+       
     </style>
-
-
 </head>
 
 <body>
 
+    <div class="titulo">
+        <h1>Registro de Funcionários</h1>
+    </div>
 
     <div class="box-search">
         <input type="search" class="form-control w-25" placeholder="Pesquisar" id="pesquisar">
@@ -133,16 +160,15 @@ $result = $conexao->query($sql);
 <script>
     var search = document.getElementById('pesquisar');
 
-    search.addEventListener("keydown", function(event){
-        if(event.key === "Enter")
-        {
+    search.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
             searchData();
         }
     });
 
-    function searchData()
-    {
+    function searchData() {
         window.location = 'pesquisa.php?search=' + search.value;
     }
 </script>
+
 </html>
