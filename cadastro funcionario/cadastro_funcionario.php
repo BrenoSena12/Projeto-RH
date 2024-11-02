@@ -27,7 +27,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestão de rh</title>
-    <link rel="stylesheet" href="cadastro_funcionario.css">
+    <link rel="stylesheet" href="cadas_funcionario.css">
 </head>
 <body>
     <div class="box">
