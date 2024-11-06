@@ -18,9 +18,6 @@
             <label for="">CPF:</label>
             <input type="text" name="cpf" id="cpf" placeholder="Digite do funcionário">
             
-            <label for="">Meses trabalhados:</label>
-            <input type="number" name="meses_trabalhados" id="meses_trabalhados" placeholder="Digite os meses">
-            
             <input type="submit" name="submit" id="submit" value="Analisar">
 
             <div class="voltar">

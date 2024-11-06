@@ -4,18 +4,19 @@
 
         include_once('../config.php'); //incluir a conexão
 
-        $cpf             = $_POST['cpf'];
-        $nome            = $_POST['nome'];
-        $telefone        = $_POST['telefone'];
-        $endereco        = $_POST['endereco'];
-        $data_nascimento = $_POST['data_nascimento'];
-        $cargo           = $_POST['cargo'];
-        $data_admissao   = $_POST['data_admissao'];
-        $salario         = $_POST['salario'];
+        $cpf               = $_POST['cpf'];
+        $nome              = $_POST['nome'];
+        $telefone          = $_POST['telefone'];
+        $endereco          = $_POST['endereco'];
+        $data_nascimento   = $_POST['data_nascimento'];
+        $cargo             = $_POST['cargo'];
+        $data_admissao     = $_POST['data_admissao'];
+        $salario           = $_POST['salario'];
+        $meses_trabalhados = $_POST['meses_trabalhados'];
 
         //Executa uma consulta SQL que insere um novo registro na tabela
-        $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario) 
-                                          VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario' )");
+        $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario, meses_trabalhados) 
+                                          VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario', '$meses_trabalhados' )");
     }
 ?>
 
@@ -81,6 +82,12 @@
                 <div class="inputBox">
                     <input type="number" name="salario" id="salario" class="inputUser" required>
                     <label for="salario" class="labelInput">Salário</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="number" name="meses_trabalhados" id="meses_trabalhados" class="inputUser" required>
+                    <label for="meses_trabalhados" class="labelInput">Meses trabalhados</label>
                 </div>
                 <br><br>
 

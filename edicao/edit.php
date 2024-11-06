@@ -15,14 +15,15 @@
 
             while($user_data = mysqli_fetch_assoc($result))
             {
-                $cpf             = $user_data['cpf'];
-                $nome            = $user_data['nome'];
-                $telefone        = $user_data['telefone'];
-                $endereco        = $user_data['endereco'];
-                $data_nascimento = $user_data['data_nascimento'];
-                $cargo           = $user_data['cargo'];
-                $data_admissao   = $user_data['data_admissao'];
-                $salario         = $user_data['salario'];
+                $cpf                = $user_data['cpf'];
+                $nome               = $user_data['nome'];
+                $telefone           = $user_data['telefone'];
+                $endereco           = $user_data['endereco'];
+                $data_nascimento    = $user_data['data_nascimento'];
+                $cargo              = $user_data['cargo'];
+                $data_admissao      = $user_data['data_admissao'];
+                $salario            = $user_data['salario'];
+                $meses_trabalhados  = $user_data['meses_trabalhados'];
             }
 
         }
@@ -96,6 +97,12 @@
                 <div class="inputBox">
                     <input type="number" name="salario" id="salario" class="inputUser" required value="<?php echo $salario?>">
                     <label for="salario" class="labelInput">Salário</label>
+                </div>
+                <br><br>
+
+                <div class="inputBox">
+                    <input type="number" name="meses_trabalhados" id="meses_trabalhados" class="inputUser" required value="<?php echo $meses_trabalhados?>">
+                    <label for="meses_trabalhados" class="labelInput">Meses trabalhados</label>
                 </div>
                 <br><br>
 
