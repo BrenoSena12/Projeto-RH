@@ -15,12 +15,13 @@
         $meses_trabalhados = $_POST['meses_trabalhados'];
 
         $decimo = ($salario / 12) * $meses_trabalhados;
-        $ferias;
-        $fgts;
+        $ferias = $salario + ($salario / 3);
+        $fgts   = $salario * 0.08;
+        $fgts_total = $fgts * $meses_trabalhados;
 
         //Executa uma consulta SQL que insere um novo registro na tabela
-        $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario, meses_trabalhados, decimo) 
-                                          VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario', '$meses_trabalhados', '$decimo' )");
+        $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario, meses_trabalhados, decimo, ferias, fgts, fgts_total) 
+                                          VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario', '$meses_trabalhados', '$decimo', '$ferias', '$fgts', '$fgts_total' )");
     }
 ?>
 
