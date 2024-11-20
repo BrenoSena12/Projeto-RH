@@ -14,16 +14,34 @@
         $salario           = $_POST['salario'];
         $meses_trabalhados = $_POST['meses_trabalhados'];
 
-        $decimo = ($salario / 12) * $meses_trabalhados;
-        $ferias = $salario + ($salario / 3);
+        // Cálculo do décimo terceiro (13º salário)
+        if ($meses_trabalhados > 12) {
+            // Se o trabalhador tem mais de 12 meses, calcula o valor completo do décimo terceiro
+            $decimo = $salario; // O valor completo do décimo terceiro é igual ao salário
+        } else {
+            // Caso contrário, calcula proporcionalmente aos meses trabalhados
+            $decimo = ($salario / 12) * $meses_trabalhados;
+        }
+
+        // Condição para calcular férias proporcionalmente ou integral
+        if ($meses_trabalhados > 12) {
+            // Se o trabalhador tem mais de 12 meses, calcula o valor completo de férias
+            $ferias = $salario + ($salario / 3);
+        } else {
+            // Caso contrário, calcula proporcionalmente
+            $ferias = ($salario + ($salario / 3)) * ($meses_trabalhados / 12);
+        }
+
+        // Cálculo do FGTS
         $fgts   = $salario * 0.08;
         $fgts_total = $fgts * $meses_trabalhados;
 
-        //Executa uma consulta SQL que insere um novo registro na tabela
+        // Executa a consulta SQL que insere um novo registro na tabela
         $result = mysqli_query($conexao, "INSERT INTO tb_cadastro_funcionarios(cpf, nome, telefone, endereco, data_nascimento, cargo, data_admissao, salario, meses_trabalhados, decimo, ferias, fgts, fgts_total) 
                                           VALUES ('$cpf', '$nome' , '$telefone', '$endereco', '$data_nascimento', '$cargo', '$data_admissao', '$salario', '$meses_trabalhados', '$decimo', '$ferias', '$fgts', '$fgts_total' )");
     }
 ?>
+
 
 
 <!DOCTYPE html>

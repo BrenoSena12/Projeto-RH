@@ -15,7 +15,6 @@
                 <img src="imagem/logo-rh.jpg" alt="">
         </article>
 
-
         <form action="configLogin.php" method="POST">
             <h1>Login</h1>
             
@@ -34,7 +33,5 @@
         
         </form>
     </main>
-    
-    
 </body>
 </html>

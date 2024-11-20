@@ -13,7 +13,6 @@
     
 ?>
 
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -41,13 +40,11 @@
             </div>
         </nav>
             
-
         <article>
             <img src="../imagem/logo-rh.jpg" alt="">
         </article>
 
     </main>
-
 
 </body>
 
